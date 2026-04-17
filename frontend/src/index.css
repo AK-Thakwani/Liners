@@ -1,0 +1,55 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  /* Neumorphic Cyberpunk Theme Variables */
+  --color-bg: #000000;
+  --color-card: #0A0A0A;
+  --color-glass: rgba(255,255,255,0.05);
+  --color-border: rgba(255,255,255,0.1);
+  --color-cyan: #00FFFF;
+  --color-fuchsia: #FF00FF;
+  --color-purple: #A259FF;
+  --color-blue: #00BFFF;
+  --color-headline: #fff;
+  --color-body: #b3b3b3;
+  --color-pill-gradient: linear-gradient(90deg, #00FFFF, #FF00FF, #A259FF, #00BFFF);
+  background-color: var(--color-bg);
+  color: var(--color-headline);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Heart water-fill animation */
+@keyframes heartFillRise {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-24px);
+  }
+}
+
+.heart-fill-animate {
+  animation: heartFillRise 350ms ease-out forwards;
+}

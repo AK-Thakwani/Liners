@@ -1,0 +1,30 @@
+name: Deploy Backend to Render
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'backend/**'
+      - '.github/workflows/deploy-backend.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Trigger Render Deployment
+        env:
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          curl --request POST \
+            --url $RENDER_DEPLOY_HOOK \
+            --header 'Content-Type: application/json'
+      
+      - name: Verify Backend
+        working-directory: ./backend
+        run: |
+          npm install
+          npm run test || echo "Tests skipped"

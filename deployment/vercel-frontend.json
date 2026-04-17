@@ -1,0 +1,16 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "frontend/build",
+  "framework": "react",
+  "env": {
+    "NODE_ENV": "production",
+    "REACT_APP_GOOGLE_CLIENT_ID": "@REACT_APP_GOOGLE_CLIENT_ID",
+    "REACT_APP_API_BASE_URL": "@REACT_APP_API_BASE_URL"
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
