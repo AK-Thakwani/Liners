@@ -38,7 +38,8 @@ npm run install-all
 **Create `frontend/.env`:**
 ```
 REACT_APP_GOOGLE_CLIENT_ID=your_google_client_id
-REACT_APP_API_BASE_URL=http://localhost:5000
+REACT_APP_API_URL=http://localhost:5000
+REACT_APP_SOCKET_URL=http://localhost:5000
 ```
 
 **Create `backend/.env`:**
@@ -84,7 +85,8 @@ npm run start:backend
    - `VERCEL_ORG_ID`: From Vercel org settings
    - `VERCEL_FRONTEND_PROJECT_ID`: From Vercel project
    - `REACT_APP_GOOGLE_CLIENT_ID`: Your Google OAuth ID
-   - `REACT_APP_API_BASE_URL`: Your backend URL
+   - `REACT_APP_API_URL`: Your backend URL
+   - `REACT_APP_SOCKET_URL`: Your backend URL
 
 #### Manual Deployment
 ```bash
@@ -153,7 +155,8 @@ Set environment variables in Railway dashboard for:
 ### Frontend (.env)
 ```
 REACT_APP_GOOGLE_CLIENT_ID=your_google_oauth_id
-REACT_APP_API_BASE_URL=https://your-backend-url.com
+REACT_APP_API_URL=https://your-backend-url.com
+REACT_APP_SOCKET_URL=https://your-backend-url.com
 ```
 
 ### Backend (.env)
