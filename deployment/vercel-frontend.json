@@ -1,6 +1,6 @@
 {
   "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "build",
+  "outputDirectory": "frontend/build",
   "framework": "react",
   "env": {
     "NODE_ENV": "production",
